@@ -1,0 +1,61 @@
+text,label,predicted_sentiment,confidence
+This movie is absolutely fantastic! Great acting and storyline.,positive,positive,0.9998806715011597
+I loved every minute of it. Brilliant cinematography and direction.,positive,positive,0.9998867511749268
+One of the best films I've ever seen. Highly recommended!,positive,positive,0.9998723268508911
+Amazing performances by all actors. A masterpiece!,positive,positive,0.9998821020126343
+Incredible visual effects and compelling narrative.,positive,positive,0.9998831748962402
+Outstanding movie with excellent character development.,positive,positive,0.9998691082000732
+A truly inspiring and beautiful film experience.,positive,positive,0.9998829364776611
+Superb acting and an engaging plot throughout.,positive,positive,0.9998738765716553
+This film exceeded all my expectations. Perfect!,positive,positive,0.9998695850372314
+Wonderfully crafted with great attention to detail.,positive,positive,0.9998793601989746
+The best movie of the year! Absolutely stunning.,positive,positive,0.999876856803894
+Brilliant script and phenomenal performances.,positive,positive,0.9998809099197388
+A cinematic gem that will stay with you forever.,positive,positive,0.999882698059082
+Expertly directed with incredible emotional depth.,positive,positive,0.9998829364776611
+This movie is pure gold. Cannot recommend enough!,positive,positive,0.9995973706245422
+Fascinating story with incredible visual storytelling.,positive,positive,0.9998815059661865
+The acting is top-notch and the story is captivating.,positive,positive,0.999890923500061
+A beautiful and moving film that touches your heart.,positive,positive,0.9998879432678223
+Excellent production values and stellar performances.,positive,positive,0.9998770952224731
+This film is a work of art. Simply magnificent!,positive,positive,0.9998778104782104
+This movie is terrible. Waste of time and money.,negative,negative,0.99981290102005
+Boring plot and poor acting. Very disappointing.,negative,negative,0.999819815158844
+I couldn't even finish watching it. Awful!,negative,negative,0.99941086769104
+Completely overrated and poorly executed.,negative,negative,0.9998164772987366
+The worst film I've seen this year.,negative,negative,0.999775230884552
+Terrible script and unconvincing performances.,negative,negative,0.9997907280921936
+A complete disaster from start to finish.,negative,negative,0.9997610449790955
+Poorly directed with no coherent storyline.,negative,negative,0.9997873902320862
+Absolutely horrible. Don't bother watching.,negative,negative,0.9994593262672424
+This movie is a complete failure in every aspect.,negative,negative,0.9997848868370056
+Incredibly boring and predictable plot.,negative,negative,0.9998020529747009
+Poor character development and weak dialogue.,negative,negative,0.9998019337654114
+A disappointing mess with no redeeming qualities.,negative,negative,0.9998008608818054
+Terrible acting and confusing narrative.,negative,negative,0.9998140931129456
+This film is painful to watch. Avoid at all costs!,negative,negative,0.9994646906852722
+Poorly written with unconvincing character arcs.,negative,negative,0.999823272228241
+A boring and uninspired piece of cinema.,negative,negative,0.9997925162315369
+Completely lacks substance and entertainment value.,negative,negative,0.9997562766075134
+Awful direction and terrible pacing throughout.,negative,negative,0.9998109936714172
+This movie is a waste of everyone's time.,negative,negative,0.9998089671134949
+"The movie was okay, nothing particularly special.",neutral,negative,0.9851625561714172
+It's an average film with some good and bad parts.,neutral,positive,0.9912492036819458
+"Not bad, but not great either. Just mediocre.",neutral,negative,0.9996447563171387
+"The movie is fine, but I've seen better.",neutral,positive,0.9749652743339539
+It's watchable but forgettable entertainment.,neutral,negative,0.9913149476051331
+The film has its moments but overall is average.,neutral,negative,0.9733496904373169
+Decent movie but nothing to write home about.,neutral,negative,0.9836366772651672
+It's an okay film with some interesting elements.,neutral,positive,0.9998722076416016
+"The movie is alright, though it could be better.",neutral,positive,0.9996248483657837
+Moderately entertaining but not exceptional.,neutral,positive,0.9977878332138062
+A reasonable film with mixed results.,neutral,negative,0.9416083693504333
+The movie is adequate but lacks wow factor.,neutral,negative,0.966044545173645
+It's a standard film with typical storytelling.,neutral,negative,0.8820393681526184
+The movie is fair but doesn't stand out.,neutral,negative,0.9693177938461304
+Acceptable entertainment with room for improvement.,neutral,positive,0.5066797137260437
+The film is passable but not memorable.,neutral,negative,0.9974279999732971
+It's an average production with standard quality.,neutral,positive,0.9916760921478271
+The movie is tolerable but uninspiring.,neutral,negative,0.9932130575180054
+Decent enough but nothing groundbreaking.,neutral,negative,0.9898257851600647
+The film is satisfactory but not remarkable.,neutral,negative,0.7800000309944153

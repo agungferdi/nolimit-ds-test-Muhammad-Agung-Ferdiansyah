@@ -1,0 +1,27 @@
+{
+  "experiment_info": {
+    "timestamp": "2025-09-25T11:19:58.600252",
+    "classification_model": "distilbert-base-uncased-finetuned-sst-2-english",
+    "embedding_model": "all-MiniLM-L6-v2"
+  },
+  "dataset_info": {
+    "total_samples": 60,
+    "label_distribution": {
+      "positive": 20,
+      "negative": 20,
+      "neutral": 20
+    }
+  },
+  "performance": {
+    "model_load_time": 219.45764112472534,
+    "embedding_creation_time": 0.5405759811401367,
+    "batch_prediction_time": 1.4986541271209717,
+    "accuracy": 0.6666666666666666,
+    "average_confidence": 0.9817775170008342
+  },
+  "technical_specs": {
+    "embedding_dimensions": 384,
+    "faiss_index_size": 60,
+    "total_embeddings": 60
+  }
+}
