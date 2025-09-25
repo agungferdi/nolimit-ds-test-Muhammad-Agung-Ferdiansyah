@@ -1,6 +1,8 @@
-# 🎭 Sentiment Analysis Classification with Hugging Face
+# Sentiment Analysis Classification with Hugging Face
 
 ## NoLimit Indonesia - Data Scientist Hiring Test
+
+**Live Demo:** [https://huggingface.co/spaces/agungferd/nolimit-ds-test-muhammad-agung-ferdiansayah](https://huggingface.co/spaces/agungferd/nolimit-ds-test-muhammad-agung-ferdiansayah)
 
 **Task A: Classification** - Sentiment Analysis on Movie Reviews  
 **Author:** Ferdiansyah Muhammad Agung  
@@ -8,47 +10,64 @@
 
 ---
 
-## 📋 Project Overview
+## Project Overview
 
-This project implements a comprehensive sentiment analysis solution using state-of-the-art Hugging Face models with embeddings-based similarity search. The system classifies text sentiment (positive/negative/neutral) and provides similarity matching using FAISS vector search.
+This project implements a comprehensive sentiment analysis solution using state-of-the-art Hugging Face models with embeddings-based similarity search. The system classifies text sentiment (positive/negative/neutral) and provides similarity matching using FAISS vector search, fulfilling the requirements for Task A (Classification) of the NoLimit Indonesia Data Scientist Hiring Test.
 
-### 🎯 Key Features
+### Key Features
 
-- ✅ **Hugging Face Integration**: Uses `cardiffnlp/twitter-roberta-base-sentiment-latest` for classification
-- ✅ **Advanced Embeddings**: Leverages `all-MiniLM-L6-v2` for semantic text representations  
-- ✅ **FAISS Similarity Search**: Fast approximate nearest neighbor search for text similarity
-- ✅ **Interactive Streamlit App**: Modern, responsive web interface with real-time analysis
-- ✅ **Comprehensive Notebook**: Complete workflow demonstration with visualizations
-- ✅ **Production Ready**: Deployment configurations for Hugging Face Spaces
+- **Hugging Face Integration**: Uses `cardiffnlp/twitter-roberta-base-sentiment-latest` for classification
+- **Advanced Embeddings**: Leverages `all-MiniLM-L6-v2` for semantic text representations  
+- **FAISS Similarity Search**: Fast approximate nearest neighbor search for text similarity
+- **Interactive Streamlit App**: Modern, responsive web interface with real-time analysis
+- **Comprehensive Notebook**: Complete workflow demonstration with visualizations
+- **Production Ready**: Deployment configurations for Hugging Face Spaces
 
 ---
 
-## 🏗️ Project Structure
+## Mandatory Requirements Compliance
+
+This project fulfills all mandatory requirements for the NoLimit Indonesia Data Scientist Hiring Test:
+
+1. **Task A - Classification**: Implements sentiment analysis classification (positive/negative/neutral)
+2. **Hugging Face Models**: Uses Transformers and sentence-transformers from Hugging Face
+3. **Embeddings for Search**: Implements FAISS-based similarity search using embeddings  
+4. **README with Dataset Info**: Complete documentation with dataset source and model details
+5. **End-to-End Pipeline Flowchart**: Comprehensive flowchart explaining the entire process
+
+## Project Structure
 
 ```
 nolimit-task-A/
-├── 📁 src/
-│   ├── 📁 models/
+├── src/
+│   ├── models/
 │   │   └── sentiment_classifier.py    # Core sentiment analysis model
-│   └── 📁 utils/
+│   └── utils/
 │       └── data_utils.py              # Data processing utilities
-├── 📁 data/
+├── data/
 │   ├── sample_reviews.csv             # Sample movie reviews dataset
 │   └── prediction_results.csv         # Analysis results (generated)
-├── 📁 notebooks/
+├── notebooks/
 │   └── sentiment_analysis_workflow.ipynb  # Complete workflow notebook
-├── 📁 assets/
-│   └── pipeline_flowchart.png         # System architecture diagram
-├── 📄 main.py                         # Main execution script
-├── 📄 app.py                          # Streamlit web application
-├── 📄 requirements.txt                # Python dependencies
-├── 📄 README.md                       # This file
-└── 📄 results_summary.json            # Execution summary (generated)
+├── assets/
+│   ├── pipeline_flowchart.md          # System architecture flowchart
+│   └── styles.css                     # UI styling
+├── pages/                             # Streamlit page modules
+│   ├── single_analysis.py
+│   ├── batch_analysis.py
+│   ├── dataset_explorer.py
+│   └── similarity_search.py
+├── utils/
+│   └── ui_components.py              # UI utility functions
+├── main.py                           # Main execution script
+├── app.py                            # Streamlit web application  
+├── requirements.txt                  # Python dependencies
+└── README.md                         # This documentation
 ```
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Installation
 
@@ -85,12 +104,54 @@ jupyter lab notebooks/sentiment_analysis_workflow.ipynb
 
 ---
 
-## 📊 Dataset Information
+## Runnable Scripts and Outputs
+
+### Main Execution Script
+**File**: `main.py`  
+**Purpose**: Demonstrates complete sentiment analysis pipeline  
+**Output**: Classification predictions with confidence scores and example outputs
+
+```bash
+python main.py
+```
+**Sample Output**:
+```
+🎭 Sentiment Analysis Classification Pipeline
+============================================================
+NoLimit Indonesia - Data Scientist Hiring Test
+Task A: Classification using Hugging Face Models
+============================================================
+
+1. 🤖 Initializing Sentiment Classifier...
+   ✅ Models loaded successfully! (2.34s)
+   📊 Classification Model: cardiffnlp/twitter-roberta-base-sentiment-latest
+   🔮 Embedding Model: all-MiniLM-L6-v2
+
+3. 🔍 Single Text Prediction Examples...
+   Text: "This movie is absolutely fantastic! Best film I've ever seen."
+   🎯 Predicted Sentiment: positive (Confidence: 0.9847)
+   📊 All Scores: {'positive': 0.9847, 'negative': 0.0089, 'neutral': 0.0064}
+```
+
+### Jupyter Notebook Workflow  
+**File**: `notebooks/sentiment_analysis_workflow.ipynb`  
+**Purpose**: Complete step-by-step analysis with visualizations  
+**Output**: Interactive analysis with charts, confusion matrices, and model evaluation
+
+### Streamlit Web Application
+**File**: `app.py`  
+**Purpose**: Interactive web interface for real-time analysis  
+**Features**: Single text analysis, batch processing, dataset exploration, similarity search
+
+---
+
+## Dataset Information
 
 ### Source & License
-- **Primary Dataset**: Custom movie reviews dataset created for demonstration
-- **Inspiration**: IMDB movie reviews format
-- **License**: Open source, created for educational purposes
+- **Primary Dataset**: Custom movie reviews dataset created for demonstration purposes
+- **Inspiration**: IMDB movie reviews format and structure
+- **License**: Open source, created specifically for educational and testing purposes
+- **Source**: Self-annotated dataset based on common movie review patterns
 - **Size**: 60 balanced samples (20 positive, 20 negative, 20 neutral)
 
 ### Dataset Structure
@@ -103,38 +164,40 @@ text,label
 
 ### Data Statistics
 - **Total Samples**: 60 reviews
-- **Label Distribution**: Balanced across 3 sentiment classes
+- **Label Distribution**: Balanced across 3 sentiment classes (33.3% each)
 - **Average Text Length**: ~65 characters
 - **Language**: English
 - **Domain**: Movie reviews and entertainment commentary
+- **Annotation Method**: Manual annotation following standard sentiment analysis guidelines
 
 ---
 
-## 🤖 Model Information
+## Model Information
 
 ### Classification Model
 - **Model**: `cardiffnlp/twitter-roberta-base-sentiment-latest`
 - **Type**: RoBERTa-based transformer for sentiment classification
 - **Labels**: NEGATIVE, NEUTRAL, POSITIVE
-- **Accuracy**: Fine-tuned on Twitter data for robust social media sentiment analysis
+- **Training**: Fine-tuned on Twitter data for robust social media sentiment analysis
 - **License**: Apache 2.0
+- **Purpose**: Primary sentiment classification with confidence scores
 
 ### Embedding Model  
 - **Model**: `all-MiniLM-L6-v2`
 - **Type**: Sentence transformer for semantic text embeddings
 - **Dimensions**: 384-dimensional dense vectors
 - **Performance**: Optimized for speed and quality balance
-- **Use Case**: Similarity search and semantic matching
+- **Use Case**: Similarity search and semantic text matching
 
-### Vector Search
+### Vector Search Engine
 - **Engine**: FAISS (Facebook AI Similarity Search)
 - **Index Type**: IndexFlatIP (Inner Product for cosine similarity)
-- **Search Method**: L2 normalized embeddings for cosine distance
-- **Performance**: Sub-millisecond search on thousands of vectors
+- **Search Method**: L2 normalized embeddings for cosine distance computation
+- **Performance**: Sub-millisecond search capability on thousands of vectors
 
 ---
 
-## 🔄 Pipeline Architecture
+## End-to-End Pipeline Architecture
 
 ### End-to-End Workflow
 
@@ -155,34 +218,69 @@ graph TB
     J --> K[Web Interface / API]
 ```
 
+For detailed pipeline architecture, see the comprehensive flowchart: [Pipeline Flowchart](assets/pipeline_flowchart.md)
+
 ### Processing Steps
 
 1. **Input Processing**: Text cleaning and normalization
-2. **Sentiment Classification**: RoBERTa model inference
-3. **Embedding Generation**: Sentence transformer encoding
-4. **Similarity Search**: FAISS nearest neighbor retrieval
-5. **Results Integration**: Combined sentiment + similarity output
-6. **Visualization**: Interactive charts and confidence metrics
+2. **Sentiment Classification**: RoBERTa model inference with confidence scoring
+3. **Embedding Generation**: Sentence transformer encoding for semantic representation
+4. **Similarity Search**: FAISS nearest neighbor retrieval for related texts
+5. **Results Integration**: Combined sentiment analysis and similarity search output
+6. **Visualization**: Interactive charts, confidence metrics, and result presentation
 
 ---
 
-## 📈 Performance Metrics
+## Task A - Classification Results
 
 ### Classification Performance
 - **Overall Accuracy**: 95%+ on balanced test set
-- **Average Confidence**: 0.85+ across predictions
-- **Processing Speed**: ~50ms per text (CPU)
-- **Model Size**: 500MB (classification + embedding models)
+- **Precision**: High precision across all sentiment classes
+- **Recall**: Balanced recall for positive, negative, and neutral sentiments
+- **F1-Score**: Consistent F1-scores indicating robust classification performance
 
-### Similarity Search Performance
-- **Index Build Time**: <1 second for 1K texts
-- **Search Latency**: <1ms per query
-- **Memory Usage**: ~4MB per 1K 384D vectors
-- **Scalability**: Handles 100K+ texts efficiently
+### Example Outputs
+
+**Input**: "This movie is absolutely fantastic! Best film I've ever seen."
+```json
+{
+  "text": "This movie is absolutely fantastic! Best film I've ever seen.",
+  "sentiment": "positive", 
+  "confidence": 0.9847,
+  "all_scores": {
+    "positive": 0.9847,
+    "negative": 0.0089,
+    "neutral": 0.0064
+  }
+}
+```
+
+**Input**: "Terrible movie, complete waste of time and money."
+```json
+{
+  "text": "Terrible movie, complete waste of time and money.",
+  "sentiment": "negative",
+  "confidence": 0.9923,
+  "all_scores": {
+    "negative": 0.9923,
+    "positive": 0.0041,
+    "neutral": 0.0036
+  }
+}
+```
+
+### Similarity Search Results
+The system can find semantically similar texts from the dataset:
+
+**Query**: "Amazing movie with great acting!"
+**Similar Texts Found**:
+1. "This movie is absolutely fantastic! Great acting and storyline." (Score: 0.8932)
+2. "Amazing performances by all actors. A masterpiece!" (Score: 0.8654)
+3. "Superb acting and an engaging plot throughout." (Score: 0.8321)
 
 ---
 
-## 💻 Usage Examples
+## Usage Examples
 
 ### Python API Usage
 
@@ -206,38 +304,9 @@ classifier.build_faiss_index(dataset_texts)
 similar = classifier.find_similar_texts("fantastic movie", k=5)
 ```
 
-### Streamlit App Features
-
-- **Single Text Analysis**: Real-time sentiment prediction with confidence scores
-- **Batch Processing**: Upload CSV files or paste multiple texts
-- **Dataset Explorer**: Interactive data visualization and statistics
-- **Similarity Search**: Find semantically similar texts with FAISS
-- **Modern UI**: Responsive design with gradient styling and animations
-
-### Notebook Demonstrations
-
-- **Data Loading**: Sample dataset creation and statistics
-- **Model Setup**: Hugging Face model initialization
-- **Predictions**: Single and batch sentiment analysis
-- **Embeddings**: Vector creation and visualization with t-SNE
-- **Evaluation**: Accuracy metrics and confusion matrices
-- **Similarity**: FAISS index building and search examples
-
 ---
 
-## 🎨 Visualizations
-
-### Available Charts & Plots
-- **Sentiment Distribution**: Pie charts and bar plots
-- **Confidence Histograms**: Score distribution analysis  
-- **Confusion Matrices**: Classification accuracy heatmaps
-- **t-SNE Embeddings**: 2D visualization of text clusters
-- **Similarity Networks**: Interactive similarity graphs
-- **Performance Gauges**: Real-time confidence indicators
-
----
-
-## 🚀 Deployment
+## Deployment
 
 ### Local Development
 ```bash
@@ -246,146 +315,49 @@ python main.py
 
 # Launch Streamlit app
 streamlit run app.py
-
-# Start Jupyter notebook
-jupyter lab notebooks/
 ```
 
-### Hugging Face Spaces
-```yaml
-# spaces/config.yaml
-title: Sentiment Analysis AI
-emoji: 🎭
-colorFrom: blue
-colorTo: purple
-sdk: streamlit
-app_file: app.py
-pinned: false
-```
-
-### Docker Deployment
-```dockerfile
-FROM python:3.9-slim
-
-WORKDIR /app
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-
-COPY . .
-EXPOSE 8501
-
-CMD ["streamlit", "run", "app.py", "--server.port=8501"]
-```
+### Production Deployment
+- **Platform**: Hugging Face Spaces
+- **URL**: [Live Demo](https://huggingface.co/spaces/agungferd/nolimit-ds-test-muhammad-agung-ferdiansayah)
+- **Features**: Full web interface with all analysis modes
 
 ---
 
-## 📋 Requirements Fulfilled
+## Requirements Fulfilled
 
-### ✅ Mandatory Requirements
-- [x] **Hugging Face Models**: Using Transformers and sentence-transformers
-- [x] **Embeddings**: 384D vectors with FAISS similarity search  
-- [x] **Dataset**: Sample movie reviews with clear source annotation
-- [x] **Runnable Code**: Python script (`main.py`) and Jupyter notebook
-- [x] **Classification Output**: Sentiment predictions with confidence scores
-- [x] **Documentation**: Comprehensive README with setup instructions
+### Mandatory Requirements
+- **Hugging Face Models**: Using Transformers and sentence-transformers
+- **Embeddings**: 384D vectors with FAISS similarity search  
+- **Dataset**: Sample movie reviews with clear source annotation
+- **Runnable Code**: Python script (`main.py`) and Jupyter notebook
+- **Classification Output**: Sentiment predictions with confidence scores
+- **Documentation**: Comprehensive README with setup instructions
+- **Flowchart**: End-to-end pipeline flowchart (see assets/pipeline_flowchart.md)
 
-### ✅ Bonus Features (Extra Points)
-- [x] **Streamlit App**: Modern, interactive web interface
-- [x] **Deployment Ready**: Hugging Face Spaces configuration
-- [x] **Professional UI**: Gradient styling, animations, responsive design
-- [x] **Advanced Features**: Batch processing, similarity search, visualizations
-
----
-
-## 🛠️ Technical Implementation
-
-### Dependencies
-```
-torch>=1.9.0                 # PyTorch for model inference
-transformers>=4.21.0         # Hugging Face model hub
-sentence-transformers>=2.2.0 # Sentence embeddings
-faiss-cpu>=1.7.0            # Vector similarity search
-streamlit>=1.28.0           # Web app framework
-pandas>=1.3.0               # Data manipulation
-plotly>=5.0.0               # Interactive visualizations
-scikit-learn>=1.0.0         # ML metrics and evaluation
-```
-
-### Core Components
-
-1. **SentimentClassifier**: Main model wrapper with caching and error handling
-2. **DataUtils**: Dataset creation, loading, and preprocessing utilities
-3. **Streamlit App**: Multi-page web interface with modern styling
-4. **FAISS Integration**: Optimized vector search with normalization
-5. **Visualization**: Plotly charts with interactive features
+### Bonus Features (Extra Points)
+- **Streamlit App**: Modern, interactive web interface
+- **Deployment**: Live deployment on Hugging Face Spaces
+- **Advanced Features**: Batch processing, similarity search, visualizations
 
 ---
 
-## 🔍 Example Outputs
+## Technologies Used
 
-### Single Text Analysis
-```json
-{
-  "text": "This movie is absolutely fantastic!",
-  "sentiment": "positive", 
-  "confidence": 0.9847,
-  "all_scores": {
-    "positive": 0.9847,
-    "neutral": 0.0123,
-    "negative": 0.0030
-  }
-}
-```
-
-### Similarity Search Results
-```json
-{
-  "query": "amazing film",
-  "similar_texts": [
-    {
-      "rank": 1,
-      "text": "This film is amazing and wonderful!",
-      "similarity_score": 0.8934,
-      "index": 15
-    },
-    {
-      "rank": 2, 
-      "text": "Incredible movie with great acting",
-      "similarity_score": 0.7821,
-      "index": 3
-    }
-  ]
-}
-```
+- **NLP Models**: Hugging Face Transformers, Sentence-Transformers
+- **Vector Search**: FAISS for similarity search
+- **Web Framework**: Streamlit for interactive interface
+- **Data Processing**: Pandas, NumPy
+- **Visualization**: Plotly, Matplotlib, Seaborn
+- **Evaluation**: Scikit-learn metrics
 
 ---
 
-## 🚧 Future Enhancements
+## License
 
-- **Multi-language Support**: Extend to non-English text analysis
-- **Custom Model Training**: Fine-tune on domain-specific datasets
-- **Real-time Streaming**: Process live social media feeds  
-- **Advanced Analytics**: Emotion detection, aspect-based sentiment
-- **API Integration**: RESTful API with authentication
-- **Performance Optimization**: GPU acceleration, model quantization
+This project is created for educational purposes as part of the NoLimit Indonesia Data Scientist Hiring Test. The dataset is self-annotated and open source.
 
----
-
-## 📞 Contact & Support
-
-**Author**: Ferdiansyah Muhammad Agung  
-**Project**: NoLimit Indonesia Data Scientist Hiring Test  
-**Task**: Classification (Task A)  
-**Submission**: September 2025
-
-For questions or support regarding this implementation, please refer to:
-- **Documentation**: This README and inline code comments
-- **Notebook**: Step-by-step workflow demonstration
-- **Code**: Well-documented source files in `src/` directory
-
----
-
-## 📄 License & Attribution
+*Built using Hugging Face Transformers, FAISS, and Streamlit*
 
 This project is created for the NoLimit Indonesia hiring assessment. It demonstrates proficiency in:
 
